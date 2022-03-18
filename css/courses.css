@@ -1,0 +1,15 @@
+.courses {
+  margin-top: 0.05rem;
+}
+
+.courses__container1 {
+  display: grid;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+}
+
+.course {
+  border-radius: 20px;
+}
