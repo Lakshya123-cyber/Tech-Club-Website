@@ -642,6 +642,7 @@ footer ul li a:hover {
   }
 
   .header__right-img {
+    margin-top: 28px;
     margin-left: -5px;
   }
 
@@ -693,5 +694,8 @@ footer ul li a:hover {
 
   .footer__socials {
     justify-content: center;
+  }
+  .btn-prrrr {
+    margin-left: 96px;
   }
 }
