@@ -13,3 +13,28 @@
 .course {
   border-radius: 20px;
 }
+
+.workshop_info {
+  padding: 10px;
+  width: 90%;
+  margin: auto;
+  font-size: large;
+  background: var(--color-bg2);
+  padding: 2rem;
+  border: 1px solid transparent;
+  transition: var(--transition);
+  position: relative;
+  top: 100px;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.red {
+  color: #dc3636c2;
+  font-weight: bold;
+}
+
+.blue {
+  color: #54c6c4;
+  font-weight: bold;
+}
