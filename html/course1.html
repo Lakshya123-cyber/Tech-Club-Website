@@ -26,10 +26,15 @@
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             let problem = document.querySelector("#prob");
+            let schedule = document.querySelector("#schedule");
+            schedule.style.display = "none";
             problem.style.display = "none";
-            document.querySelector("#show_hide").addEventListener("click", () => {
+            document.querySelector("#show_prob").addEventListener("click", () => {
                 problem.style.display = "inline-block";
             });
+            document.querySelector("#show_schedule").addEventListener("click", () => {
+                schedule.style.display = "inline-block";
+            })
         });
     </script>
     <div class="loader">
@@ -56,60 +61,95 @@
         </div>
     </nav>
 
-    <section class="team">
+    <div class="workshop_info">
         <h2>Workshop Overview</h2>
-        <article class="team__memberr">
-            <div class="team__member-image" style="flex: 1;">
-                <img src="../img/ekam.png" alt="" style="flex: 1;">
-            </div>
-            <div class="team__member-info">
-                <h4>Ekam Singh</h4>
-                <p>Head of App Dev</p>
-            </div>
-            <div class="team__member-socials">
-                <a href="https://instagram.com/ekamisme" target="_blank"><i class="uil uil-instagram-alt"></i></a>
-            </div>
-        </article>
-    </section>
+        <p>
+            During the course of this workshop, Ekam Singh (Head of App Dev) will guide you through the basics of
+            programming with Java.<br><br>
+            On <span class="red">Day 1</span> we will be explaining what programming is about, with the inclusion of
+            some pseudocode examples.
+            We will explain <span class="blue">variables and different data types</span>, and show how they are used in
+            programming.
+            We will also look at <span class="blue">different operations and operators used in programming, such as
+                arithmetic and logical
+                operators</span>.
+            Then we will look at some programming constructs including <span class="blue">loops and conditionals, and
+                input and output</span>.
+            Finally, we will end the day by showing how to install and set up <span class="blue">Java 17 and IntelliJ
+                IDEA</span>,
+            and we will teach some <span class="blue">basic terminal commands</span> that will be necessary for the rest
+            of the workshop.
+        </p><br>
+        <p>
+            On <span class="red">Day 2</span>, we will begin with our <span class="blue">first programs in Java</span>,
+            featuring some <span class="blue">basic input and output</span>.
+            We will then look at the <span class="blue">possible data types in java</span>, and show <span
+                class="blue">how to assign values to variables</span>.
+            We will also look at <span class="blue">loops and conditions in java</span>, and <span class="blue">how
+                operators are used</span>.
+            Afterwards, we will jump into <span class="blue">1D and 2D arrays in java</span>, and we will learn <span
+                class="blue">how they store information</span>, and how
+            they can be used.
+            We will end the day by discussing some <span class="blue">important string functions</span>.
+        </p><br>
+        <p>
+            <span class="red">Day 3</span> will be the final day of the learning phase, and during this day we will look
+            at <span class="blue">how to make our code
+                modular</span> with the help of <span class="blue">functions</span>.
+            We will <span class="blue">revise what functions do</span>, and <span class="blue">how values and parameters
+                can be passed to or returned by a function</span>.
+            We will end the learning phase by looking at <span class="blue">objects</span> and discuss the <span
+                class="blue">basics of OOP - Object-Oriented
+                Programming</span>.
+        </p><br>
+        <p>
+            On <span class="red">Day 4</span>, the <span class="blue">challenge problem for the workshop</span> will be
+            released, after a <span class="blue">one hour (optional) doubt-clearance
+                session</span>.
+            For the next two days, the participants will be solving the challenge problem, and the submissions for the
+            problem will open on <span class="red">day 5</span>.
+            The <span class="red">10 best submissions</span>(graded according to the criteria below) will get <span
+                class="blue">certificates of excellence</span>!
+        </p><br>
 
-    <p>
-        During the course of this workshop, Ekam Singh (Head of App Dev) will guide you through the basics of
-        programming with Java.<br><br>
-        The first day will be explaining what programming is about, with the inclusion of some pseudocode examples.
-        We will explain variables and different data types, and show how they are used in programming.
-        We will also look at different operations and operators used in programming, such as arithmetic and logical
-        operators.
-        Then we will look at some programming constructs including loops and conditionals, and input and output.
-        Finally, we will end the day by showing how to install and set up Java and IntelliJ IDEA,
-        and we will teach some basic terminal commands that will be necessary for the rest of the workshop.
-    </p><br>
-    <p>
-        On Day 2, we will begin with our first programs in Java, featuring some basic input and output.
-        We will then look at the possible data types in python, and show how to assign values to variables.
-        Afterwards, we will jump into 1D and 2D arrays in java, and we will learn how they store information, and how
-        they can be used.
-        We will end the day by discussing some important string functions.
-    </p><br>
-    <p>
-        Day 3 will be the final day of the learning phase, and during this day we will look at how to make our code
-        modular with the help of functions.
-        We will revise what functions do, and how values and parameters can be passed to or returned by a function.
-        We will end the learning phase by looking at objects and discuss the basics of OOP - Object-Oriented
-        Programming.
-    </p><br>
-    <p>
-        On day 4, the challenge problem for the workshop will be released, after a one hour (optional) doubt-clearance
-        session.
-        For the next two days, the participants will be solving the challenge problem, and the submissions for the
-        problem will open on day 5.
-        The 10 best submissions(graded according to the criteria below) will get certificates of excellence!.
-    </p><br>
-
-    <button id="show_hide" class="btn btn-prrrr">See Challenge Problem</button>
-    <br><br>
-    <div id="prob">
-        Challenge problem will only be released at noon (SGT) on day 4 (25th March).
+        <button id="show_prob" class="btn btn-prrrr" style="margin: auto;">See Challenge Problem</button>
+        <br><br>
+        <div id="prob" class="container team_container" style="width: 80%; margin: auto;">
+            <article class="team__member" style="background-color: var(--color-bg);">
+                <div class="team__member-info">
+                    Challenge problem will only be released at <span class="red">3:00 pm on day 4 (26th March).</span>
+                </div>
+            </article>
+        </div>
+        <br>
+        <button id="show_schedule" class="btn btn-prrrr" style="margin: auto;">See schedule</button>
+        <br><br>
+        <div id="schedule" class="container team_container" style="width: 80%; margin: auto;">
+            <article class="team__member" style="background-color: var(--color-bg);">
+                <div class="team__member-info">
+                    All timings in SGT
+                    <ul>
+                        <li style="text-align: left;"><span class="red">23rd March (Wednesday): Day 1 -</span><span
+                                class="blue"> 3:00 to 5:30 pm teaching</span></li>
+                        <li style="text-align: left;"><span class="red">24th March (Thursday): Day 2 -</span><span
+                                class="blue"> 3:00 to 5:30 pm teaching</span></li>
+                        <li style="text-align: left;"><span class="red">25th March (Friday): Day 3 -</span><span
+                                class="blue"> 3:00 to 5:30 pm teaching</span></li>
+                        <li style="text-align: left;"><span class="red">26th March (Saturday): Day 4 -</span><span
+                                class="blue"> 1:30 to 2:30 pm doubt clearance</span></li>
+                        <li style="text-align: left;"><span class="red">26th March (Saturday): Day 4 - </span><span
+                                class="blue">3:00 pm challenge problem released</span></li>
+                        <li style="text-align: left;"><span class="red">27th March (Sunday): Day 5 -</span><span
+                                class="blue"> 6:00 pm submissions opened</span></li>
+                        <li style="text-align: left;"><span class="red">28th March (Monday): </span><span
+                                class="blue">12:00 pm deadline for submissions</span></li>
+                    </ul>
+                </div>
+            </article>
+        </div>
     </div>
+
+    <br><br>
 
     <section class="team">
         <h2>Grading criteria for submissions</h2>
@@ -158,6 +198,22 @@
                 </div>
             </article>
         </div>
+    </section>
+
+    <section class="team">
+        <article class="team__memberr">
+            <div class="team__member-image">
+                <img src="../img/ekam.png" alt="">
+            </div>
+            <div class="team__member-info">
+                <h4>Ekam Singh</h4>
+                <p>Head of App Dev</p>
+                <p>Instructor for this workshop</p>
+            </div>
+            <div class="team__member-socials">
+                <a href="https://instagram.com/ekamisme" target="_blank"><i class="uil uil-instagram-alt"></i></a>
+            </div>
+        </article>
     </section>
 
     <footer>
