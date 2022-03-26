@@ -27,13 +27,18 @@
         document.addEventListener("DOMContentLoaded", () => {
             let problem = document.querySelector("#prob");
             let schedule = document.querySelector("#schedule");
+            let bonus_prob = document.querySelector("#bonus_prob");
             schedule.style.display = "none";
             problem.style.display = "none";
+            bonus_prob.style.display = "none";
             document.querySelector("#show_prob").addEventListener("click", () => {
                 problem.style.display = "inline-block";
             });
             document.querySelector("#show_schedule").addEventListener("click", () => {
                 schedule.style.display = "inline-block";
+            })
+            document.querySelector("#show_bonus").addEventListener("click", () => {
+                bonus_prob.style.display = "inline-block";
             })
         });
     </script>
@@ -66,58 +71,77 @@
         <p>
             During the course of this workshop, Ekam Singh (Head of App Dev) will guide you through the basics of
             programming with Java.<br><br>
-            On <span class="red">Day 1</span> we will be explaining what programming is about, with the inclusion of
-            some pseudocode examples.
-            We will explain <span class="blue">variables and different data types</span>, and show how they are used in
-            programming.
-            We will also look at <span class="blue">different operations and operators used in programming, such as
-                arithmetic and logical
-                operators</span>.
-            Then we will look at some programming constructs including <span class="blue">loops and conditionals, and
-                input and output</span>.
-            Finally, we will end the day by showing how to install and set up <span class="blue">Java 17 and IntelliJ
-                IDEA</span>,
-            and we will teach some <span class="blue">basic terminal commands</span> that will be necessary for the rest
-            of the workshop.
+            On <span class="red">Day 1</span> we will be explaining what programming is about, with the inclusion of some pseudocode examples.
+            We will explain <span class="blue">variables and different data types</span>, and show how they are used in programming.
+            We will also look at <span class="blue">different operations and operators used in programming, such as arithmetic and logical
+            operators</span>.
+            Then we will look at some programming constructs including <span class="blue">loops and conditionals, and input and output</span>.
+            Finally, we will end the day by showing how to install and set up <span class="blue">Java 17 and IntelliJ IDEA</span>,
+            and we will teach some <span class="blue">basic terminal commands</span> that will be necessary for the rest of the workshop.
         </p><br>
         <p>
-            On <span class="red">Day 2</span>, we will begin with our <span class="blue">first programs in Java</span>,
-            featuring some <span class="blue">basic input and output</span>.
-            We will then look at the <span class="blue">possible data types in java</span>, and show <span
-                class="blue">how to assign values to variables</span>.
-            We will also look at <span class="blue">loops and conditions in java</span>, and <span class="blue">how
-                operators are used</span>.
-            Afterwards, we will jump into <span class="blue">1D and 2D arrays in java</span>, and we will learn <span
-                class="blue">how they store information</span>, and how
+            On <span class="red">Day 2</span>, we will begin with our <span class="blue">first programs in Java</span>, featuring some <span class="blue">basic input and output</span>.
+            We will then look at the <span class="blue">possible data types in java</span>, and show <span class="blue">how to assign values to variables</span>.
+            We will also look at <span class="blue">loops and conditions in java</span>, and <span class="blue">how operators are used</span>.
+            Afterwards, we will jump into <span class="blue">1D and 2D arrays in java</span>, and we will learn <span class="blue">how they store information</span>, and how
             they can be used.
             We will end the day by discussing some <span class="blue">important string functions</span>.
         </p><br>
         <p>
-            <span class="red">Day 3</span> will be the final day of the learning phase, and during this day we will look
-            at <span class="blue">how to make our code
-                modular</span> with the help of <span class="blue">functions</span>.
-            We will <span class="blue">revise what functions do</span>, and <span class="blue">how values and parameters
-                can be passed to or returned by a function</span>.
-            We will end the learning phase by looking at <span class="blue">objects</span> and discuss the <span
-                class="blue">basics of OOP - Object-Oriented
-                Programming</span>.
+            <span class="red">Day 3</span> will be the final day of the learning phase, and during this day we will look at <span class="blue">how to make our code
+            modular</span> with the help of <span class="blue">functions</span>.
+            We will <span class="blue">revise what functions do</span>, and <span class="blue">how values and parameters can be passed to or returned by a function</span>.
+            We will end the learning phase by looking at <span class="blue">objects</span> and discuss the <span class="blue">basics of OOP - Object-Oriented
+            Programming</span>.
         </p><br>
         <p>
-            On <span class="red">Day 4</span>, the <span class="blue">challenge problem for the workshop</span> will be
-            released, after a <span class="blue">one hour (optional) doubt-clearance
-                session</span>.
+            On <span class="red">Day 4</span>, the <span class="blue">challenge problem for the workshop</span> will be released, after a <span class="blue">one hour (optional) doubt-clearance
+            session</span>.
             For the next two days, the participants will be solving the challenge problem, and the submissions for the
             problem will open on <span class="red">day 5</span>.
-            The <span class="red">10 best submissions</span>(graded according to the criteria below) will get <span
-                class="blue">certificates of excellence</span>!
+            The <span class="red">10 best submissions</span>(graded according to the criteria below) will get <span class="blue">certificates of excellence</span>!
         </p><br>
-
+    
         <button id="show_prob" class="btn btn-prrrr" style="margin: auto;">See Challenge Problem</button>
         <br><br>
         <div id="prob" class="container team_container" style="width: 80%; margin: auto;">
             <article class="team__member" style="background-color: var(--color-bg);">
                 <div class="team__member-info">
-                    Challenge problem will only be released at <span class="red">2:30 pm on day 4 (26th March).</span>
+                    <h2>Hangman!!</h2>
+                    <h3 style="text-align: left;">Requirements:</h3>
+                    <ul>
+                        <li style="text-align: left;">There should be a <span class="red">predefined array of words</span> from which a <span class="red">word will randomly be chosen when the game starts</span>. You can decide what all words to include in that list.</li>
+                        <li style="text-align: left;">Every time, before you ask for the user to guess (input) a letter (character), you should <span class="red">display underscores to show letters that have not been guessed yet</span>.</li>
+                        <li style="text-align: left;">You should also <span class="red">show the number of remaining lives</span>(start with 6 lives, lose one life with each incorrect guess)</li>
+                        <li style="text-align: left;">If the inputted character is in the word, then the user's remaining lives shouldn't reduce, and the appropriate underscores should be replaced by the correctly guessed letter.</li>
+                        <li style="text-align: left;">If the inputted character is not in the word, then the user's remaining lives should reduce by 1, and none of the underscores should be replaced.</li>
+                        <li style="text-align: left;">There should be a check to ensure that the entered character is a letter and not a digit or a special character. If the user inputs any one of them, then he/she should be prompted again to input a valid character.</li>
+                        <li style="text-align: left;">The game should end when the <span class="red">user correctly guesses the word or when the user's remaining lives becomes zero</span>. The final message can thus either be “You Won!!” or “You Lost...better luck next time”.</li>
+                    </ul>
+                    <h3 style="text-align: left;">Code requirements:</h3>
+                    <ul>
+                        <li style="text-align: left;">Must have at least 1 function of your own</li>
+                        <li style="text-align: left;">Must use at least 1 loop(while or for) and 1 conditional</li>
+                        <li style="text-align: left;">Must tell what is going on(ask for input, tell that a life was lost etc.)</li>
+                    </ul>
+                </div>
+                <br><br>
+                <p style="text-align: left;">Don't understand? Look at one of the demo videos on the discord server! If you haven't joined it yet, <a href="https://discord.gg/tjbMFjmn" style="color: #42e3ff">join</a> it now!</p>
+                <br>
+                <button class="btn btn-prrrr" id="show_bonus">Want an extra challenge? Look at the bonus problem!</button>
+                <div id="bonus_prob" class="team__member-info">
+                    <h2 class="red">-----FOR BONUS CHALLENGE ONLY-----</h2>
+                    <h2>Hangman 2.0</h2>
+                    <h3 style="text-align: left;">Requirements:</h3>
+                    <ul>
+                        <li style="text-align: left;">Store all of the previous guesses the user has made, and inform the user if he/she guesses the same letter twice. Don't penalize for guessing the same letter twice; instead, the user should be prompted to enter a different letter.</li>
+                        <li style="text-align: left;">Draw a the hangman before every prompting the user to input a character alongside the word to guess and the remaining lives</li>
+                        <li style="text-align: left;">Add body parts to the hangman drawing(head first, then one hand, then other hand, then body, then one leg and lastly other leg) each time an incorrect guess is input</li>
+                        <li style="text-align: left;">After the game is over, ask the user if he/she wants to play again. If the response is yes, then reset the game
+                            (randomly pick a new word from the list of words. Make sure that the new word chosen isn't the same as the
+                            previous word) and start the game. If the response is no, then end the program.</li>
+                    </ul>
+                    <p style="text-align: left;">Don't understand? Look at one of the demo videos on the discord server! If you haven't joined it yet, <a href="https://discord.gg/tjbMFjmn" style="color: #42e3ff">join</a> it now!</p>
                 </div>
             </article>
         </div>
@@ -128,22 +152,15 @@
             <article class="team__member" style="background-color: var(--color-bg);">
                 <div class="team__member-info">
                     All timings in SGT
-                    <ul>
-                        <li style="text-align: left;"><span class="red">23rd March (Wednesday): Day 1 -</span><span
-                                class="blue"> 3:00 to 5:30 pm teaching</span></li>
-                        <li style="text-align: left;"><span class="red">24th March (Thursday): Day 2 -</span><span
-                                class="blue"> 3:00 to 5:30 pm teaching</span></li>
-                        <li style="text-align: left;"><span class="red">25th March (Friday): Day 3 -</span><span
-                                class="blue"> 3:00 to 5:30 pm teaching</span></li>
-                        <li style="text-align: left;"><span class="red">26th March (Saturday): Day 4 -</span><span
-                                class="blue"> 1:15 to 2:30 pm doubt clearance</span></li>
-                        <li style="text-align: left;"><span class="red">26th March (Saturday): Day 4 - </span><span
-                                class="blue">2:30 pm challenge problem released</span></li>
-                        <li style="text-align: left;"><span class="red">27th March (Sunday): Day 5 -</span><span
-                                class="blue"> 6:00 pm submissions opened</span></li>
-                        <li style="text-align: left;"><span class="red">28th March (Monday): </span><span
-                                class="blue">12:00 pm deadline for submissions</span></li>
-                    </ul>
+                   <ul>
+                       <li style="text-align: left;"><span class="red">23rd March (Wednesday): Day 1 -</span><span class="blue"> 3:00 to 5:30 pm teaching</span></li>
+                       <li style="text-align: left;"><span class="red">24th March (Thursday): Day 2 -</span><span class="blue"> 3:00 to 5:30 pm teaching</span></li>
+                       <li style="text-align: left;"><span class="red">25th March (Friday): Day 3 -</span><span class="blue"> 3:00 to 5:30 pm teaching</span></li>
+                       <li style="text-align: left;"><span class="red">26th March (Saturday): Day 4 -</span><span class="blue"> 1:30 to 2:30 pm doubt clearance</span></li>
+                       <li style="text-align: left;"><span class="red">26th March (Saturday): Day 4 - </span><span class="blue">3:00 pm challenge problem released</span></li>
+                       <li style="text-align: left;"><span class="red">27th March (Sunday): Day 5 -</span><span class="blue"> 6:00 pm submissions opened</span></li>
+                       <li style="text-align: left;"><span class="red">28th March (Monday): </span><span class="blue">12:00 pm deadline for submissions</span></li>
+                   </ul>
                 </div>
             </article>
         </div>
@@ -201,17 +218,30 @@
     </section>
 
     <section class="team">
-        <article class="team__memberr">
-            <div class="team__member-image">
-                <img src="../img/ekam.png" alt="">
+        <article class="team__member" style="width: 25%; margin: auto;">
+            <div class="team__member-image" style="flex: 1;">
+                <img src="../img/ekam.png" alt="" style="flex: 1;">
             </div>
             <div class="team__member-info">
                 <h4>Ekam Singh</h4>
                 <p>Head of App Dev</p>
-                <p>Instructor for this workshop</p>
             </div>
             <div class="team__member-socials">
                 <a href="https://instagram.com/ekamisme" target="_blank"><i class="uil uil-instagram-alt"></i></a>
+            </div>
+        </article>
+        <br>
+        <article class="team__member" style="width: 25%; margin: auto;">
+            <div class="team__member-image" style="flex: 1;">
+                <img src="https://cdn.discordapp.com/avatars/451738402778251264/849448acb9df699ed031119ef7ac4f9e.png?size=4096" alt="choke" style="flex: 1;">
+            </div>
+            <div class="team__member-info">
+                <h4>Chokalingam Chinnagopal</h4>
+                <p>Workshop sponsor</p>
+                <p><i>Choke it like Chokalingam</i></p>
+            </div>
+            <div class="team__member-socials">
+                <a href="https://instagram.com/faadilthelegend" target="_blank"><i class="uil uil-instagram-alt"></i></a>
             </div>
         </article>
     </section>
